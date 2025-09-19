@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ destination.place_name }}</title>
+</head>
+<body>
+    <h1>{{ destination.place_name }}</h1>
+    <p><b>Weather:</b> {{ destination.weather }}</p>
+    <p><b>Location:</b> {{ destination.state }}, {{ destination.district }}</p>
+    <p><b>Description:</b> {{ destination.description }}</p>
+    <p><a href="{{ destination.google_map_link }}" target="_blank">📍 View on Google Maps</a></p>
+    <a href="{% url 'destination_list' %}">⬅ Back to List</a>
+</body>
+</html>

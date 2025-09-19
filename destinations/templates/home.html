@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tourist Destinations</title>
+</head>
+<body>
+    <h1>Welcome to Tourist Destinations App</h1>
+    <ul>
+        <li><a href="{% url 'destination_list' %}">View All Destinations</a></li>
+        <li><a href="{% url 'destination_create' %}">Add New Destination</a></li>
+        <li><a href="/api/destinations/">API (JSON View)</a></li>
+    </ul>
+</body>
+</html>

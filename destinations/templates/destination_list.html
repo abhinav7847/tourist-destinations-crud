@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Destinations</title>
+</head>
+<body>
+    <h1>All Tourist Destinations</h1>
+    <a href="{% url 'home' %}">🏠 Home</a> |
+    <a href="{% url 'destination_create' %}">➕ Add Destination</a>
+    <ul>
+        {% for destination in destinations %}
+            <li>
+                <a href="{% url 'destination_detail' destination.id %}">
+                    {{ destination.place_name }} ({{ destination.state }}, {{ destination.district }})
+                </a>
+                | <a href="{% url 'destination_update' destination.id %}">✏️ Edit</a>
+                | <a href="{% url 'destination_delete' destination.id %}">🗑️ Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
